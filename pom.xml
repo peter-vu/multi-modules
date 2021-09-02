@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>multi-modules</artifactId>
-    <version>{revision}</version>
+    <version>{git }</version>
     <modules>
         <module>module1</module>
         <module>module2</module>
@@ -18,5 +18,33 @@
         <maven.compiler.target>8</maven.compiler.target>
         <revision>1.0-SNAPSHOT</revision>
     </properties>
-
+    <build>
+        <!-- To define the plugin version in your parent POM -->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-scm-plugin</artifactId>
+                    <version>1.11.3</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <!-- To use the plugin goals in your POM or parent POM -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.11.3</version>
+                <configuration>
+                    <tag>${project.artifactId}-${project.version}</tag>
+                </configuration>
+            </plugin>
+        </plugins>
+        <defaultGoal>install</defaultGoal>
+    </build>
+    <scm>
+        <connection>scm:git:github.com/peter-vu/multi-modules.git</connection>
+        <developerConnection>scm:git:github.com/peter-vu/multi-modules.git</developerConnection>
+        <url>https://github.com/peter-vu/multi-modules.git</url>
+    </scm>
 </project>
