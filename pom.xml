@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>multi-modules</artifactId>
-    <version>{git }</version>
+    <version>${revision}</version>
     <modules>
         <module>module1</module>
         <module>module2</module>
@@ -43,8 +43,8 @@
         <defaultGoal>install</defaultGoal>
     </build>
     <scm>
-        <connection>scm:git:github.com/peter-vu/multi-modules.git</connection>
-        <developerConnection>scm:git:github.com/peter-vu/multi-modules.git</developerConnection>
+        <connection>scm:git:https://github.com/peter-vu/multi-modules.git</connection>
+        <developerConnection>scm:git:https://github.com/peter-vu/multi-modules.git</developerConnection>
         <url>https://github.com/peter-vu/multi-modules.git</url>
     </scm>
 </project>
