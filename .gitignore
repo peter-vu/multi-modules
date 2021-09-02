@@ -48,9 +48,22 @@ cmake-build-*/
 
 # File-based project format
 *.iws
+# Eclipse
+.classpath
+.project
+.settings/
 
-# IntelliJ
-out/
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
